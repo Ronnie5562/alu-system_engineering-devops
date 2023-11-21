@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# SetUp Process for Nginx on a server
+
+apt-get -y update
+pat-get -y install nginx
+ufw enable
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+service nginx restart
