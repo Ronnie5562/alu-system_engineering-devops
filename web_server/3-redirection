@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Configure your Nginx server so that /redirect_me is redirecting to another page
 
-apt-get update
-apt-get install -y nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 
 new_route="server_name _;\n\trewrite ^\/redirect_me https:\/\/https://github.com/Ronnie5562 permanent;"
-sed -i "s/server_name _;/$new_route/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name _;/$new_route/" /etc/nginx/sites-enabled/default
 
-service nginx restart
+sudo service nginx restart
