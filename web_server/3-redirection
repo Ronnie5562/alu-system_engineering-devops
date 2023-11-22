@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
 # Configure your Nginx server so that /redirect_me is redirecting to another page
 
-apt-get update -y
+apt-get update
 apt-get install -y nginx
 
-echo "Holberton School" > /var/www/html/index.html
-printf %s "server {
-    listen [::]:80 default_server;
-    listen 80 default_server;
-    root /var/www/html;
-    index index.html index.htm index.nginx-debian.html;
-
-    server_name _;
-    location /redirect_me {
-        return 301 https://github.com/Ronnie5562;
-    }
-}
-" > /etc/nginx/sites-available/default
+new_route="server_name _;\n\trewrite ^\/redirect_me https:\/\/https://github.com/Ronnie5562 permanent;"
+sed -i "s/server_name _;/$new_route/" /etc/nginx/sites-enabled/default
 
 service nginx restart
