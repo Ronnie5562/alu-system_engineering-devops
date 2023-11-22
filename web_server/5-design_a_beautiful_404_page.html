@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hello.css">
+    <link rel="shortcut icon" href="./assets/logo1.png" type="image/x-icon">
+    <title>Not Found</title>
+
+    <style>
+        body {
+            margin-top: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0px 20px;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left > h1 {
+            font-size: 50px;
+            font-weight: 900;
+            margin-top: 5px;
+        }
+
+        .nav-left > img {
+            margin-top: -35px;
+        }
+
+
+        .nav-right {
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 60px;
+        }
+
+        ul > li {
+            font-weight: 600;
+            transition: color 0.6s ease;
+            position: relative;
+        }
+
+
+        ul li:hover {
+            color: #6347d1;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10%;
+            height: 2px;
+            background-color: #6347d1;
+            border-radius: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.8s ease-in-out;
+        } 
+
+        ul li:hover::before {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        button {
+            color: #ffffff;
+            font-weight: 500;
+            background-color: #6347d1;
+            padding: 10px 35px;
+            border-radius: 8px;
+            border: 1px solid white;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .main-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-body-top > img{
+            display: block;
+            margin: auto;
+        }
+
+        .main-body-bottom > div > h1 {
+            color: #6347d1;
+        }
+
+        .main-body-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-body-bottom > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-body-bottom > div > button {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 600;
+            background-color: #6347d1;
+            padding: 15px 60px;
+            border-radius: 20px;
+            border: 1px solid white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav-left">
+            <img src="./assets/logo2.png" alt="logo">
+            <h1>Ronnie</h1>
+        </div>
+
+        <div class="nav-right">
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Technology</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+            <button class="custom-btn">Hire Us</button>
+        </div>
+    </header>
+    <div class="main-body">
+        <div class="main-body-top">
+            <img src="./assets/full.png" alt="" draggable="false">
+        </div>
+        <div class="main-body-bottom">
+            <div>
+                <h1>Ceci n'est pas une page</h1>
+                <button>Go Back</button>
+            </div>
+            <p style="word-wrap: normal;">The page you were searching for seems to have taken a detour into deep space. But don't worry, we're here to navigate you back to safety.</p>
+        </div>
+    </div>
+</body>
+</html>
