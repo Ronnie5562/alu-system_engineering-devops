@@ -3,5 +3,8 @@
 # The name of the custom HTTP header must be `X-Served-By`
 # The value of the custom HTTP header must be the `hostname` of the server Nginx is running on
 
+sudo apt-get update
+sudo apt-get -y install nginx
+
 custom_header="server_name _;\n\tadd_header X-Served-By \$HOSTNAME;"
-sudo sed -i "s/server_name _;/$custom_header/" /etc/nginx/sites-enabled/default
+sudo sed -i "s|server_name _;|$custom_header|" /etc/nginx/sites-enabled/default
