@@ -4,7 +4,7 @@
 
 This repository showcases the implementation and configuration of HAProxy for efficient load balancing in web applications. HAProxy, a powerful and flexible open-source software, plays a pivotal role in distributing incoming traffic across multiple servers, ensuring optimal performance, high availability, and reliability.
 
-## Key Features:
+# Key Features:
 - `Load Distribution:` HAProxy evenly distributes incoming traffic among backend servers, preventing overloading of any single server and optimizing resource utilization.
 
 - `Health Checking:` Constantly monitors server health through customizable checks, automatically removing or redirecting traffic from unhealthy servers.
@@ -14,3 +14,8 @@ This repository showcases the implementation and configuration of HAProxy for ef
 - `SSL Termination:` Handles SSL encryption/decryption, offloading this task from backend servers, improving performance, and simplifying server-side configurations.
 
 - `High Availability:` Implements failover mechanisms and redundancy, ensuring uninterrupted service even if some servers encounter issues.
+
+<hr>
+
+# Author
+## [`Abimbola Ronald`](https://www.linkedin.com/in/abimbola-ronald-977299224/)
