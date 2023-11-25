@@ -6,14 +6,14 @@ sudo apt-get -y install haproxy=2.8.\*
 
 echo \
 "
-frontend  lb-frontend
+frontend lb-frontend
         bind *:80
         mode http
         default_backend lb-backend
 backend lb-backend
         balance roundrobin
-        server 5829-web-01 54.234.216.53:80 check
-        server 5829-web-02 34.228.165.232:80 check
+        server web-01 54.234.216.53:80 check
+        server web-02 34.228.165.232:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
