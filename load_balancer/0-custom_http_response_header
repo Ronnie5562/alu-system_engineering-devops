@@ -7,6 +7,7 @@ sudo apt-get update
 sudo apt-get -y install nginx
 sudo ufw enable
 sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'OpenSSH'
 echo 'Hello World!' |sudo tee /var/www/html/index.html
 
 custom_header="server_name _;\n\tadd_header X-Served-By \$HOSTNAME;"
