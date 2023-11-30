@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo apt-get install ufw
+sudo ufw allow 'OpenSSH'
+sudo ufw allow 'Nginx Full'
+ufw default deny incoming
+ufw default allow outgoing
