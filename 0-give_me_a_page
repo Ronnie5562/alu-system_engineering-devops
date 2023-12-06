@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# you just have to restart apache
-sudo service apache2 restart
